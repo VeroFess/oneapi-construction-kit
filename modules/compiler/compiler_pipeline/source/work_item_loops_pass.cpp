@@ -1642,7 +1642,7 @@ Function *compiler::utils::WorkItemLoopsPass::makeWrapperFunction(
       auto *const exitBlock = [&]() {
         switch (barrierMain.getSchedule(i)) {
           default:
-            assert(!"Unexpected barrier schedule enum");
+            assert(false && "Unexpected barrier schedule enum");
             LLVM_FALLTHROUGH;
           case BarrierSchedule::Unordered:
           case BarrierSchedule::ScalarTail:
