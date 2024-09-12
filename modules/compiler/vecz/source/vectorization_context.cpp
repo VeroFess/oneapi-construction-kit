@@ -583,6 +583,8 @@ Function *VectorizationContext::getOrCreateMaskedAtomicFunction(
       BINOP_CASE(FMin, "fmin");
       BINOP_CASE(UIncWrap, "uincwrap");
       BINOP_CASE(UDecWrap, "udecwrap");
+      BINOP_CASE(USubCond, "usubcond");
+      BINOP_CASE(USubSat, "usubsat");
       case llvm::AtomicRMWInst::BAD_BINOP:
         return nullptr;
     }

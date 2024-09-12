@@ -26,7 +26,7 @@ inline llvm::Value *createSimpleTargetReduction(
     llvm::Value *Src, llvm::RecurKind RdxKind) {
 #if LLVM_VERSION_MAJOR >= 18
   (void)TTI;
-  return llvm::createSimpleTargetReduction(B, Src, RdxKind);
+  return llvm::createSimpleReduction(B, Src, RdxKind);
 #else
   return llvm::createSimpleTargetReduction(B, TTI, Src, RdxKind);
 #endif
